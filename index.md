@@ -23,7 +23,7 @@ title: false
 <h3>
   Installing <span style="font-family: monospace">git</span>
 </h3>
-<ul style="padding-bottom:20px;padding-top:40px">
+<ul style="padding-bottom:20px;padding-top:40px;">
   <li>
     Instructions for installing on all platforms (Linux, Mac, Windows) are available here:<br> 
     <a target="_blank", href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">
@@ -31,7 +31,7 @@ title: false
     </a>
   </li>
   <li>You can verify that your installation worked by checking the version of Git from the command line.
-  <ul style="padding-left:40px">
+  <ul style="padding-left:40px;">
     <li>Mac Users: Open up your terminal</li>
     <li>Windows Users: Open up Git Bash</li>
     <li>Run the following command:</li>
@@ -50,28 +50,28 @@ title: false
 <h3>
   Generating Your SSH Key
 </h3>
-<ul style="padding-bottom:20px;padding-top:40px">
+<ul style="padding-bottom:20px;padding-top:40px;">
   <li>
     Check for existing keys<br>
-    <div class="code-div">
+    <div style="font-size:60% !important;" class="code-div">
       ls -al ~/.ssh
     </div>
   </li>
   <li>
     If you don't have keys, then generate a key<br>
-    <div class="code-div">
-      ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    <div style="font-size:60% !important;" class="code-div">
+      ssh-keygen -t rsa -b 4096 -C "YourEmail@mail.com"
     </div>
   </li>
   <li>
     Start the key agent<br>
-    <div class="code-div">
+    <div style="font-size:60% !important;" class="code-div">
       eval "$(ssh-agent -s)"
     </div>
   </li>
   <li>
     Add the key to the agent<br>
-    <div class="code-div">
+    <div style="font-size:60% !important;" class="code-div">
       ssh-add ~/.ssh/id_rsa
     </div>
   </li>
@@ -97,7 +97,7 @@ title: false
       Log into GitHub -> Settings -> SSH and GPG keys
     </li>
     <li>Copy the key to clipboard and Paste 
-    <ul style="padding-left:40px">
+    <ul style="padding-left:40px;">
       <li>Mac Users<br>
         <div class="code-div">
           pbcopy < ~/.ssh/id_rsa.pub
@@ -145,23 +145,16 @@ title: none
   </li>
   <li>
     Copy/Paste the GitHub commands
-    <div class="code-div">
+    <div style="font-size:50% !important;" class="code-div">
       echo "# test" >> README.md<br>
       git init<br>
       git add README.md<br>
       git commit -m "first commit"<br>
-      git remote add origin git@github.com:{YourUserName}/members.git<br>
+      git remote add origin git@github.com:{UserName}/members.git<br>
       git push -u origin master<br>
     </div>
   </li>
 </ul>
-
-<div class="footer">
-  Guidelines on how to make good commit messages:&nbsp;&nbsp;
-  <a target="_blank" href="http://chris.beams.io/posts/git-commit/">
-    http://chris.beams.io/posts/git-commit/
-  </a>
-</div>
 
 
 Making a Commit (Adding to README)
@@ -172,9 +165,13 @@ title: none
   Making a Commit (Adding to README)
 </h3>
 
-<ul style="padding-bottom:20px;padding-top:40px">
+<ul class="extra-li-top-pad" style="padding-bottom:40px;padding-top:40px;">
   <li>
-    Edit the README.md file however you'd like
+    Add your Name to the README file as a bullet.
+  </li>
+  <img src="./img/making-a-commit.png">
+  <li>
+    Save your changes
   </li>
   <li>
     "Stage" all files, commit, then push to GitHub
@@ -186,6 +183,12 @@ title: none
   </li>
 </ul>
 
+<div class="footer">
+  Guidelines on how to make good commit messages:&nbsp;&nbsp;
+  <a target="_blank" href="http://chris.beams.io/posts/git-commit/">
+    http://chris.beams.io/posts/git-commit/
+  </a>
+</div>
 
 Clone a Repo
 ====================================================
@@ -195,7 +198,7 @@ title: none
   Clone a Repo
 </h3>
 
-<ul style="padding-bottom:20px;padding-top:40px">
+<ul class="extra-li-top-pad" style="padding-bottom:20px;padding-top:40px;">
   <li>
     Navigate to where you want repo to be<br>
     <div class="code-div">
@@ -224,8 +227,98 @@ title: none
   Fixing a Merge Conflict
 </h3>
 
-...
+<ul class="extra-li-top-pad" style="padding-bottom:20px;padding-top:40px;">
+  <li>
+    When 2 people change the same lines of code it creates a "merge conflict". 
+  </li>
+  <li>
+    Merge conflicts need to be "resolved", meaning reconcile the differences between commits.
+  </li>
+  <li>
+    The first sign is not being able to push your recent commits
+  </li>
+  <img src="./img/cannot-push.png">
+</ul>
 
+Fixing a Merge Conflict (cont.)
+====================================================
+title: none
+
+<h3>
+  Fixing a Merge Conflict (cont.)
+</h3>
+
+<ul class="extra-li-top-pad" style="padding-bottom:20px;padding-top:40px;">
+  <li>
+    So you follow the hint and pull
+    <div class="code-div">
+      git pull
+    </div>
+  </li>
+  <li>
+    Then you receive a message about a "CONFLICT"<br>(fix conflicts, then commit)
+  </li>
+  <img src="./img/after-pulling.png">
+</ul>
+
+Fixing a Merge Conflict (cont.)
+====================================================
+title: none
+
+<h3>
+  Fixing a Merge Conflict (cont.)
+</h3>
+
+<ul style="padding-bottom:10px;padding-top:10px">
+  <li>
+    Open up the conflicted file (in this case README.md)
+  </li>
+  <img height="150px !important;" src="./img/seeing-the-diff.png">
+  <li>You will notice wierd markings
+  <ul style="padding-left:40px;">
+    <li>The marker showing the start of the conflict
+      <div class="code-div">
+        "<<<<<<< HEAD"
+      </div>
+    </li>
+    <li>The marker showing the end of your change (HEAD)
+      <div class="code-div">
+        "======="
+      </div>
+    </li>
+    <li>The marker showing the end of the server's version
+      <div class="code-div">
+        ">>>>>>> 7bd926b......"
+      </div>
+    </li>
+  </ul>
+  </li>
+</ul>
+
+Fixing a Merge Conflict (cont.)
+====================================================
+title: none
+
+<h3>
+  Fixing a Merge Conflict (cont.)
+</h3>
+
+<ul class="extra-li-top-pad" style="padding-bottom:10px;padding-top:10px">
+  <li>
+    Open up the conflicted file (in this case README.md)
+  </li>
+  <li>
+    Edit file to how you want it. Make sure to remove weird markings.
+  </li>
+  <img src="./img/fixed-conflict.png">
+  <li>Commit like any other change and you're done (Resolved!)
+    <div class="code-div">
+      git add .<br>
+      git commit -m "Fix merge conflict"<br>
+      git push<br>
+    </div>
+  </li>
+</ul>
 
 Fixing or Resetting Work
 ====================================================
@@ -235,35 +328,110 @@ title: none
   Fixing or Resetting Work
 </h3>
 
-<ul style="padding-bottom:20px;padding-top:40px">
+<ul style="padding-bottom:20px;padding-top:40px;">
   <li>
-    It's possible to erase commits/reset back to a certain point
+    It's possible to erase commits back to a certain point
   </li>
   <ul style="padding-left:40px;padding-top:10px;">
-    <li>Just find the commit you want to reset to</li>
-    <li>Click the copy button to get on clipboard</li>
+    <li>
+      <div>
+        <span style="">Click on the commits button to view</span>&nbsp;&nbsp;
+        <img style="vertical-align:middle" src="./img/commits-button.png">
+      </div>
+    </li>
+    <li>Click copy button to get commit hash on clipboard</li>
   </ul>
   <img src="./img/commit-hash.png">
-  <div class="code-div">
-    git reset --hard 2feeb51899f80a2ddea5b353260841350285406f
-  </div>
   <li>
-    Push change to the server with force tag (add, commit, push)
+    Run the following command to reset your local commit history
+    <div class="code-div">
+      git reset --hard 2feeb51899f80a2ddea5b353260841350285406f
+    </div>
+  </li>
+  <li>
+    Commit like any other change, but add "-f" on your <span style="font-family: monospace">git push</span>
     <div class="code-div">
       git push -f
     </div>
   </li>
 </ul>
-There are other ways to fix or undo your git history:<br>
-<a target="_blank" href="https://github.com/blog/2019-how-to-undo-almost-anything-with-git">
-  https://github.com/blog/2019-how-to-undo-almost-anything-with-git
-</a>
 
-Working on Branches + a Pull Request
+<div class="footer">
+  There are other ways to fix or undo your git history:<br>
+  <a target="_blank" href="https://github.com/blog/2019-how-to-undo-almost-anything-with-git">
+    https://github.com/blog/2019-how-to-undo-almost-anything-with-git
+  </a>
+</div>
+
+Working on a Branch
 ====================================================
+title: none
 
-Working on Branches + a Pull Request
-Now everyone will create a branch, and add a commit. Steve will demo how to create a branch and add work. Then he will add a pull request for Josiah to approve.
+<h3>
+  Working on Branches + a Pull Request
+</h3>
+
+<ul style="padding-bottom:20px;padding-top:40px;">
+  <li>
+    Start work on a "branch". It's a copy of your current state.
+    <div class="code-div">
+      git checkout -b my_branch
+    </div>
+  </li>
+  <li>
+    This branch is only local. Push it to GitHub.
+    <div class="code-div">
+      git push -u origin my_branch
+    </div>
+  </li>
+  <li>
+    Make a change to the README.md file, commit, & push.
+  </li>
+  <li>
+    Next switch back to master branch and look at README.md
+  </li>
+    <div class="code-div">
+      git checkout master
+    </div>
+  </li>
+  <li>
+    Your change is gone! It only exists on "my_branch". Switch back now.
+  </li>
+    <div class="code-div">
+      git checkout my_branch
+    </div>
+</ul>
+
+
+Branching + Pull Request
+====================================================
+title: none
+
+<h3>
+  Branching + Pull Request
+</h3>
+
+<ul style="padding-bottom:20px;padding-top:40px;">
+  <li>
+    Branches isolate code until ready to be "merged".<br>
+    Create a pull request when you are ready to merge.
+  <ul style="padding-left:40px;padding-top:10px;">
+    <li>Look in GitHub for "my_branch"</li>
+    <li>Click the button that says "Compare & pull request</li>
+  </ul>
+  <img src="./img/create-pull-request.png">
+  <li>
+    Pick a "target" branch (where you want new code to be applied). 
+  </li>
+  <li>
+    Review that your changes make sense.
+  </li>
+  <li>
+    Add a message outlining why this pull request is needed and
+    how it essentially solves the problem of why it was needed.
+  </li>
+</ul>
+
 
 Items Still Not Covered
 ====================================================
@@ -272,4 +440,5 @@ Items Still Not Covered
 <span style="font-family: monospace;  font-size: 85%;">git stash pop</span>
 * More advanced branching with <span style="font-family: monospace;  font-size: 85%;">git checkout</span> 
 * Forking and staying current with <span style="font-family: monospace;  font-size: 85%;">git rebase</span> 
+* Closing issues via commit messages (more info <a target="_blank" href="https://help.github.com/articles/closing-issues-via-commit-messages/">here</a>)
 * Git LFS (Large File Store) for versioning large data files

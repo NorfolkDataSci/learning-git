@@ -188,3 +188,7 @@ blockquote {
   display: table-cell;
   vertical-align: top;
 }
+
+.extra-li-top-pad li {
+  padding-top: 20px !important;
+}
