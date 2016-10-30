@@ -1,0 +1,13 @@
+*.Rproj
+.Rproj.user
+.Rhistory
+.RData
+*/*csv
+*/*txt
+*/*xls
+*/*xlsx
+*/*cache/
+*/*-figure/
+.httr-oauth
+token_file
+twitter_token
