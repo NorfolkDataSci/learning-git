@@ -1,3 +1,9 @@
+
+<meta property="og:title" content="Learn the Basics of Git">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://norfolkdatasci.github.io/learning-git">
+<meta property="og:image" content="http://graphicrustication.com/images/tutorials/learn-git.gif">
+
 <div class="logo">
   <a href="http://www.meetup.com/NorfolkDataSci/" target="_blank">
   <img src="./img/norfolk-data-sci-logo.png" style="width:200px;" alt="logo">
