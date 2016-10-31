@@ -277,10 +277,10 @@ title: none
 
 <ul class="extra-li-top-pad" style="padding-bottom:20px;padding-top:40px;">
   <li>
-    When 2 people change the same lines of code it creates a "merge conflict". 
+    When 2 people change the same lines of code it creates a "merge conflict" 
   </li>
   <li>
-    Merge conflicts need to be "resolved", meaning reconcile the differences between commits.
+    Merge conflicts need to be "resolved", meaning reconcile the differences between commits
   </li>
   <li>
     The first sign is not being able to push your recent commits
@@ -356,7 +356,7 @@ title: none
     Open up the conflicted file (in this case README.md)
   </li>
   <li>
-    Edit file to how you want it. Make sure to remove weird markings.
+    Edit file to how you want it. Make sure to remove weird markings
   </li>
   <img src="./img/fixed-conflict.png">
   <li>Commit like any other change and you're done (Resolved!)
@@ -414,19 +414,19 @@ title: none
 
 <ul style="padding-bottom:20px;padding-top:40px;">
   <li>
-    Start work on a "branch". It's a copy of your current state.
+    Start work on a "branch". It's a copy of your current state
     <div class="code-div">
       git checkout -b my_branch
     </div>
   </li>
   <li>
-    This branch is only local. Push it to GitHub.
+    This branch is only local, so push it to GitHub
     <div class="code-div">
       git push -u origin my_branch
     </div>
   </li>
   <li>
-    Make a change to the README.md file, commit, & push.
+    Make a change to the README.md file, commit, & push
   </li>
   <li>
     Next switch back to master branch and look at README.md
@@ -436,7 +436,7 @@ title: none
     </div>
   </li>
   <li>
-    Your change is gone! It only exists on "my_branch". Switch back now.
+    Your change is gone! It only exists on "my_branch". Switch back now
   </li>
     <div class="code-div">
       git checkout my_branch
@@ -454,22 +454,22 @@ title: none
 
 <ul style="padding-bottom:20px;padding-top:40px;">
   <li>
-    Branches isolate code until ready to be "merged".<br>
-    Create a pull request when you are ready to merge.
+    Branches isolate code until ready to be "merged"<br>
+    Create a pull request when you are ready to merge
   <ul style="padding-left:40px;padding-top:10px;">
     <li>Look in GitHub for "my_branch"</li>
     <li>Click the button that says "Compare & pull request</li>
   </ul>
   <img src="./img/create-pull-request.png">
   <li>
-    Pick a "target" branch (where you want new code to be applied). 
+    Pick a "target" branch (where you want new code to be applied) 
   </li>
   <li>
-    Review that your changes make sense.
+    Review that your changes make sense
   </li>
   <li>
     Add a message outlining why this pull request is needed and
-    how it essentially solves the problem of why it was needed.
+    how it essentially solves the problem of why it was needed
   </li>
 </ul>
 
