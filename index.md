@@ -163,6 +163,48 @@ title: none
 </ul>
 
 
+Create your own repo on Github (cont.)
+====================================================
+title: none
+
+<h3>
+  Create your own repo on Github (cont.)
+</h3>
+
+<ul>
+  <li>
+      The first command initializes the repository<br>
+      <div class="code-div">
+        git init
+    </div>
+  </li>
+  <li>
+    The second command tells git to track an <i>individual</i> file<br>
+    <div class="code-div">
+      git add README.md
+    </div>
+  </li>
+  <li>
+    This commits changes on a tracked file<br>
+    <div class="code-div">
+      git commit -m "first commit"
+    </div>
+  </li>
+  <li>
+    Now we tell git where our remote repository is<br>
+    <div class="code-div">
+      git remote add {name} git@github.com:{UserName}/members.git
+    </div>
+  </li>
+  <li>
+    Save your local commited changes to the remote repository<br>
+    <div class="code-div">
+      git push -u {name} {branch name}
+    </div>
+  </li>
+</ul>
+
+
 Making a Commit (Adding to README)
 ====================================================
 title: none
@@ -173,7 +215,7 @@ title: none
 
 <ul class="extra-li-top-pad" style="padding-bottom:40px;padding-top:40px;">
   <li>
-    Add your Name to the README file as a bullet.
+    Add your Name to the README file as a bullet
   </li>
   <img src="./img/making-a-commit.png">
   <li>
@@ -280,7 +322,7 @@ title: none
     Open up the conflicted file (in this case README.md)
   </li>
   <img height="150px !important;" src="./img/seeing-the-diff.png">
-  <li>You will notice wierd markings
+  <li>You will notice weird markings
   <ul style="padding-left:40px;">
     <li>The marker showing the start of the conflict
       <div class="code-div">
