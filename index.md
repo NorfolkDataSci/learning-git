@@ -181,10 +181,10 @@ title: none
   </li>
   <li>
     "Stage" all files, commit, then push to GitHub
-    <div class="code-div">
+    <div style="font-size:70%;" class="code-div">
       git add .<br>
       git commit -m "Update README" -m "Add Change"<br>
-      git push<br>
+      git push origin master<br>
     </div>
   </li>
 </ul>
@@ -351,7 +351,7 @@ title: none
   <li>
     Run the following command to reset your local commit history
     <div class="code-div">
-      git reset --hard 2feeb51899f80a2ddea5b353260841350285406f
+      git reset &ndash;&ndash;hard 2feeb51899f80a2ddea5b353260841350285406f
     </div>
   </li>
   <li>
@@ -416,7 +416,7 @@ title: none
     Create a pull request when you are ready to merge.
   <ul style="padding-left:40px;padding-top:10px;">
     <li>Look in GitHub for "my_branch"</li>
-    <li>Click the button that says "Compare & pull request</li>
+    <li>Click the button that says "Compare & pull request"</li>
   </ul>
   <img src="./img/create-pull-request.png">
   <li>
